@@ -5,6 +5,7 @@ from aiogram import Bot, Dispatcher, executor, types
 from aiogram.contrib.fsm_storage.memory import MemoryStorage
 from aiogram.dispatcher.filters.state import State, StatesGroup
 from aiogram.dispatcher import FSMContext
+#from PIL import Image,ImageDraw,ImageFont
 
 # import asyncio
 
@@ -22,18 +23,18 @@ kb.add(button3)
 meny_kb = types.InlineKeyboardMarkup(
     inline_keyboard=[
         [
-            types.KeyboardButton(text='Рассчитать норму калорий', callback_data='calories'),
-            types.KeyboardButton(text='Формулы расчёта', callback_data='formulas')
+            types.InlineKeyboardButton(text='Рассчитать норму калорий', callback_data='calories'),
+            types.InlineKeyboardButton(text='Формулы расчёта', callback_data='formulas')
         ]
     ], resize_keyboard=True
 )
 buying_kb = types.InlineKeyboardMarkup(
     inline_keyboard=[
         [
-            types.KeyboardButton(text='Omega 3', callback_data='product_buying'),
-            types.KeyboardButton(text='Vitamin C', callback_data='product_buying'),
-            types.KeyboardButton(text='Vitamin B6', callback_data='product_buying'),
-            types.KeyboardButton(text='Zinc citrate', callback_data='product_buying')
+            types.InlineKeyboardButton(text='Omega 3', callback_data='product_buying'),
+            types.InlineKeyboardButton(text='Vitamin C', callback_data='product_buying'),
+            types.InlineKeyboardButton(text='Vitamin B6', callback_data='product_buying'),
+            types.InlineKeyboardButton(text='Zinc citrate', callback_data='product_buying')
         ]
     ], resize_keyboard=True
 )
